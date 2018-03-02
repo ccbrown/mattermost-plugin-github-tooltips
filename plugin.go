@@ -173,12 +173,6 @@ func (p *Plugin) serveTooltip(w http.ResponseWriter, r *http.Request) {
 			repository(name: "%s") {
 			  name
 			  pullRequest(number: %s) {
-				assignees(first: 100) {
-				  nodes {
-					avatarUrl
-					login
-				  }
-				}
 				author {
 				  avatarUrl
 				  login

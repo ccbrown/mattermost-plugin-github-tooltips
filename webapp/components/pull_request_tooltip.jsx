@@ -26,19 +26,6 @@ export default class PullRequestTooltip extends React.PureComponent {
             ));
         }
 
-        const assignees = [];
-        for (const node of pr.assignees.nodes) {
-            assignees.push((
-                <li
-                    className='github-user'
-                    key={node.login}
-                >
-                    <img src={node.avatarUrl}/>
-                    {node.login}
-                </li>
-            ));
-        }
-
         const labels = [];
         for (const node of pr.labels.nodes) {
             // See https://www.w3.org/TR/WCAG20/
@@ -54,7 +41,7 @@ export default class PullRequestTooltip extends React.PureComponent {
                 components.push(c);
             }
             const l = (0.2126 * components[0]) + (0.7152 * components[1]) + (0.0722 * components[2]);
-            const textColor = l > 0.179 ? '#000' : '#fff';
+            const textColor = l > 0.20 ? '#000' : '#fff';
 
             labels.push((
                 <li
@@ -144,9 +131,6 @@ export default class PullRequestTooltip extends React.PureComponent {
             ));
         }
 
-        const assigneesHeader = assignees.length > 0 ? (<th>{'Assignees'}</th>) : null;
-        const assigneesBody = assignees.length > 0 ? (<td><ul>{assignees}</ul></td>) : null;
-
         return (
             <div
                 style={{
@@ -162,7 +146,7 @@ export default class PullRequestTooltip extends React.PureComponent {
                 </p>
                 <table width='100%'>
                     <thead>
-                        <tr><th>{'Review Requests'}</th>{assigneesHeader}<th>{'Labels'}</th><th>{'Status Checks'}</th></tr>
+                        <tr><th>{'Review Requests'}</th><th>{'Labels'}</th><th>{'Status Checks'}</th></tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -171,7 +155,6 @@ export default class PullRequestTooltip extends React.PureComponent {
                                     {reviewRequests}
                                 </ul>
                             </td>
-                            {assigneesBody}
                             <td>
                                 <ul>
                                     {labels}
