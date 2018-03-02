@@ -1,0 +1,30 @@
+{
+  "name": "github-tooltips",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "prop-types": "15.5.10",
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.1.1",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "css-loader": "0.28.9",
+    "eslint": "3.17.1",
+    "eslint-plugin-react": "6.10.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "style-loader": "0.19.1",
+    "webpack": "2.2.1"
+  },
+  "scripts": {
+    "build": "webpack --display-error-details --verbose --progress",
+    "check": "eslint --ext \".jsx\" --ext \".js\" --ignore-pattern node_modules --quiet ."
+  }
+}

@@ -1,0 +1,142 @@
+.github-tooltip-container {
+    background-color: #fff;
+    border: 1px solid #c0d3eb;
+    border-radius: 3px;
+    transform: translate(-50%, -100%);
+    padding: 15px;
+    color: #24292e;
+    z-index: 1000000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+
+.github-tooltip-container::before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -16px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-color: transparent;
+    border-top-color: #c0d3eb;
+    border-width: 8px;
+    border-style: solid;
+}
+
+.github-tooltip-container::after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -14px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-color: transparent;
+    border-top-color: #fff;
+    border-width: 7px;
+    border-style: solid;
+}
+
+.github-tooltip-container h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.github-tooltip-container .pr-state {
+    text-transform: capitalize;
+    background-color: #6a737d;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px 8px;
+    margin-right: 8px;
+}
+
+.github-tooltip-container .pr-state-open {
+    background-color: #2cbe4e;
+}
+
+.github-tooltip-container .pr-state-merged {
+    background-color: #6f42c1;
+}
+
+.github-tooltip-container .pr-state-closed {
+    background-color: #cb2431;
+}
+
+.github-tooltip-container td, .github-tooltip-container th {
+    vertical-align: top;
+    padding: 2px;
+}
+
+.github-tooltip-container ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 20px;
+}
+
+.github-tooltip-container li {
+    margin-bottom: 3px;
+}
+
+.github-tooltip-container .github-label {
+    border-radius: 2px;
+    font-weight: 600;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 0.15em 4px;
+    height: 20px;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+.github-tooltip-container .github-user {
+    color: #586069;
+    font-weight: 600;
+}
+
+.github-tooltip-container .github-user img {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+.github-tooltip-container .github-ref {
+    background-color: #eff7ff;
+    padding: 0px 5px;
+    border-radius: 3px;
+    color: #274466;
+    font: 0.75em/2 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    display: inline-block;
+}
+
+.github-tooltip-container .github-status-check {
+    font-weight: 600;
+    position: relative;
+    padding-left: 16px;
+}
+
+.github-tooltip-container .github-status-check svg {
+    fill: currentColor;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+}
+
+.github-tooltip-container .github-green {
+    color: #28a745;
+}
+
+.github-tooltip-container .github-red {
+    color: #cb2431;
+}
+
+.github-tooltip-container .github-pending {
+    color: #dbab09;
+}

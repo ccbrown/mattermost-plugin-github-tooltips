@@ -1,0 +1,18 @@
+id: github-tooltips
+name: GitHub Tooltips
+description: Adds enhanced tooltips to GitHub links.
+version: '0.0'
+backend:
+  executable: plugin.exe
+webapp:
+  bundle_path: plugin.js
+settings_schema:
+  settings:
+    - key: GitHubClientId
+      display_name: GitHub Client Id
+      type: text
+      help_text: The client id of your OAuth application on GitHub.
+    - key: GitHubClientSecret
+      display_name: GitHub Client Secret
+      type: text
+      help_text: The client secret for your OAuth application on GitHub.
