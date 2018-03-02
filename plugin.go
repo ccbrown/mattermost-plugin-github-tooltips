@@ -169,7 +169,7 @@ func (p *Plugin) serveTooltip(w http.ResponseWriter, r *http.Request) {
 	if match := githubPullRequestURL.FindStringSubmatch(linkURL); match != nil {
 		data, err, code := p.githubGraphQLQuery(userId, fmt.Sprintf(`{
 		  organization(login: "%s") {
-			name
+			login
 			repository(name: "%s") {
 			  name
 			  pullRequest(number: %s) {

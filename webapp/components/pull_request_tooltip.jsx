@@ -158,7 +158,7 @@ export default class PullRequestTooltip extends React.PureComponent {
                     <span className={'pr-state pr-state-' + pr.state.toLowerCase()}>{pr.state.toLowerCase()}</span>
                     <span className={'github-user'}>{pr.author.login}</span>
                     {' wants to merge into '}
-                    <span className={'github-ref'}>{org.name + '/' + repo.name + ':' + pr.baseRef.name}</span>
+                    <span className={'github-ref'}>{org.login + '/' + repo.name + ':' + pr.baseRef.name}</span>
                 </p>
                 <table width='100%'>
                     <thead>
